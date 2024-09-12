@@ -1,6 +1,7 @@
 body {
   display: flex;
   font-family: "Indie Flower", cursive;
+  overflow: hidden;
 }
 .container {
   background-color: darkgray;
@@ -9,9 +10,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100vw;
-  height: 55vh;
+  height: 80%;
   margin-inline: 10px;
-  margin-top: 14rem;
+  margin-top: 10rem;
 }
 
 .wrap1,
@@ -29,10 +30,8 @@ body {
   padding: 10px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 
-  transition: transform 2s;
-  /* transition: width 2s; */
-  /* transform: translateZ(-500px); */
-  animation: taDa 300ms ease-in 840ms;
+  transition: rotate 800ms;
+  animation: taDa 4s ease-in 1s;
 }
 
 .wrap1 {
@@ -57,7 +56,7 @@ p {
   width: 270px;
   height: 250px;
   background: linear-gradient(to bottom, #fdf5c1, #e8e08a);
-  rotate: 354deg;
+  rotate: -9deg;
 }
 
 .verde-chiaro {
@@ -71,7 +70,7 @@ p {
   width: 290px;
   height: 255px;
   background: linear-gradient(to bottom, #c9bde5, #b9b1d0);
-  rotate: 352deg;
+  rotate: -8deg;
 }
 
 @keyframes taDa {
@@ -85,17 +84,14 @@ p {
 }
 
 .giallo:hover {
-  width: 290px;
-  height: 250px;
+  scale: 1.05;
   rotate: 0deg;
 }
 .verde-chiaro:hover {
-  width: 290px;
-  height: 250px;
+  scale: 1.05;
   rotate: 0deg;
 }
 .lilla:hover {
-  width: 290px;
-  height: 250px;
+  scale: 1.05;
   rotate: 0deg;
 }
