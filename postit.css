@@ -1,0 +1,96 @@
+body {
+  display: flex;
+  font-family: "Indie Flower", cursive;
+  perspective: 10px;
+}
+.container {
+  background-color: darkgray;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  height: 55vh;
+  margin-inline: 10px;
+  margin-top: 14rem;
+}
+/* .container div {
+  width: 33.333%;
+  display: flex;
+  border: 2px solid black;
+} */
+.wrap1,
+.wrap2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.wrap1 div,
+.wrap2 div {
+  width: 290px;
+  height: 250px;
+  padding: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+
+  transition: transform 3s;
+  transform: translateZ(-500px);
+  animation: taDa 1s ease forwards;
+}
+
+.wrap1 {
+  margin-bottom: 56px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  left: 65px;
+  top: 60px;
+}
+p {
+  font-size: 30px;
+  position: relative;
+  top: 80px;
+  left: 45px;
+}
+
+.giallo {
+  background: linear-gradient(to bottom, #fdf5c1, #e8e08a);
+  transform: rotate(354deg);
+}
+
+.verde-chiaro {
+  background: linear-gradient(to bottom, #d2e8b6, #b5d0a4);
+  transform: rotate(10deg);
+}
+
+.lilla {
+  background: linear-gradient(to bottom, #c9bde5, #b9b1d0);
+  transform: rotate(352deg);
+}
+
+@keyframes taDa {
+  0% {
+    transform: translateZ(2500px);
+    width: 50rem;
+  }
+  50% {
+    width: 25rem;
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+.giallo:hover {
+  transform: rotate(0deg);
+}
+.verde-chiaro:hover {
+  transform: rotate(0deg);
+}
+.lilla:hover {
+  transform: rotate(0deg);
+}
