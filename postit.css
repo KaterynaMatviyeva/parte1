@@ -1,7 +1,6 @@
 body {
   display: flex;
   font-family: "Indie Flower", cursive;
-  perspective: 10px;
 }
 .container {
   background-color: darkgray;
@@ -34,9 +33,10 @@ body {
   padding: 10px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 
-  transition: transform 3s;
-  transform: translateZ(-500px);
-  animation: taDa 1s ease forwards;
+  transition: transform 2s;
+  /* transition: width 2s; */
+  /* transform: translateZ(-500px); */
+  animation: taDa 300ms ease-in 840ms;
 }
 
 .wrap1 {
@@ -58,39 +58,48 @@ p {
 }
 
 .giallo {
+  width: 270px;
+  height: 250px;
   background: linear-gradient(to bottom, #fdf5c1, #e8e08a);
-  transform: rotate(354deg);
+  rotate: 354deg;
 }
 
 .verde-chiaro {
+  width: 280px;
+  height: 260px;
   background: linear-gradient(to bottom, #d2e8b6, #b5d0a4);
-  transform: rotate(10deg);
+  rotate: 10deg;
 }
 
 .lilla {
+  width: 290px;
+  height: 255px;
   background: linear-gradient(to bottom, #c9bde5, #b9b1d0);
-  transform: rotate(352deg);
+  rotate: 352deg;
 }
 
 @keyframes taDa {
-  0% {
-    transform: translateZ(2500px);
-    width: 50rem;
+  from {
+    transform: perspective(1000px) translateZ(2500px);
   }
-  50% {
-    width: 25rem;
-  }
-  100% {
-    transform: translateZ(0);
+
+  to {
+    transform: perspective(1000px) translateZ(0);
   }
 }
 
 .giallo:hover {
-  transform: rotate(0deg);
+  width: 290px;
+  height: 250px;
+  rotate: 0deg;
 }
 .verde-chiaro:hover {
-  transform: rotate(0deg);
+  width: 290px;
+  height: 250px;
+  rotate: 0deg;
 }
 .lilla:hover {
-  transform: rotate(0deg);
+  width: 290px;
+  height: 250px;
+  rotate: 0deg;
 }
